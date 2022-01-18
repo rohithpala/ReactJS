@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AgeCalculator from "./containers/age-calculator";
+import App from "./containers/App";
 
-ReactDOM.render(<AgeCalculator />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

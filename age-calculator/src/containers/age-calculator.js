@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import "../stylesheets/age-calculator.css";
 
+function changeDate(calledBy) {
+   if ((calledBy === "month") || (calledBy === "year" && document.getElementById("month-dd").value === "2"))
+      document.getElementById('date-dd').selectedIndex = 0;
+}
+
 class AgeCalculator extends Component {
    state = {
       dateArray: [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-   }
-
-   changeDate = (calledBy) => {
-      if ((calledBy === "month") || (calledBy === "year" && document.getElementById('month-dd').value === "2"))
-         document.getElementById('date-dd').selectedIndex = 0;
    }
 
    checkMonthAndYear = () => {
@@ -114,26 +114,51 @@ class AgeCalculator extends Component {
             <div id="heading">
                <h1>Age Calculator:</h1>
                <pre>  </pre>
-               <a href="../how-it-works/how-it-works.html"><i class="fas fa-info-circle" id="info"></i></a>
+               <a href="../how-it-works/how-it-works.html"><i className="fas fa-info-circle" id="info"></i></a>
             </div>
 
             <div id="dmy-container">
                <div id="date-container">
                   <label>Date:</label>
-                  <select id="date-dd" onclick={this.checkMonthAndYear}>
+                  <select id="date-dd" onClick={this.checkMonthAndYear}>
                      <option value="select">Select Date</option>
-                     {/* <script>
-                              const date = document.getElementById('date-dd');
-                              for (i = 1; i <= 31; i++) {
-                                   date.innerHTML += "<option value='" + i + "'>" + i + "</option>";
-                              }
-                         </script> */}
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                     <option value="11">11</option>
+                     <option value="12">12</option>
+                     <option value="13">13</option>
+                     <option value="14">14</option>
+                     <option value="15">15</option>
+                     <option value="16">16</option>
+                     <option value="17">17</option>
+                     <option value="18">18</option>
+                     <option value="19">19</option>
+                     <option value="20">20</option>
+                     <option value="21">21</option>
+                     <option value="22">22</option>
+                     <option value="23">23</option>
+                     <option value="24">24</option>
+                     <option value="25">25</option>
+                     <option value="26">26</option>
+                     <option value="27">27</option>
+                     <option value="28">28</option>
+                     <option value="29">29</option>
+                     <option value="30">30</option>
+                     <option value="31">31</option>
                   </select>
                </div>
 
                <div id="month-container">
                   <label>Month:</label>
-                  <select id="month-dd" onchange={this.changeDate("month")}>
+                  <select id="month-dd" onChange="changeDate('month')">
                      <option value="select">Select Month</option>
                      <option value="1">January</option>
                      <option value="2">February</option>
@@ -152,15 +177,12 @@ class AgeCalculator extends Component {
 
                <div id="year-container">
                   <label>Year:</label>
-                  <input id="year-ip" type="number" min="1" placeholder="Year" oninput={this.changeDate("year")} />
-                  <script>
-                     document.getElementById('year-ip').setAttribute('max', new Date().getFullYear());
-                  </script>
+                  <input id="year-ip" type="number" min="1" max={new Date().getFullYear()} placeholder="Year" onInput="changeDate('year')" />
                </div>
             </div>
 
             <div id="btn-container">
-               <button id="age-button" type="submit" onclick="calculateAge()">Calculate Age</button>
+               <button id="age-button" type="submit" onClick={this.calculateAge}>Calculate Age</button>
             </div>
 
             <div id="age-container">
