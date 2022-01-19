@@ -13,7 +13,7 @@ class AgeCalculator extends Component {
          document.querySelector(".date-dd").selectedIndex = 0;
    }
 
-   checkMonthAndYear = () => {
+   changeDatesBasedOnMonthAndYear = () => {
       let inputMonth = document.querySelector(".month-dd");
       let inputYear = document.querySelector(".year-ip");
 
@@ -92,7 +92,7 @@ class AgeCalculator extends Component {
          } else if (birth > today) {
             alert("Birth date should be less than today: " + new Date());
          } else {
-            let days = parseInt((today - birth) / (1000 * 3600 * 24));
+            let days = parseInt((today - birth) / (1000 * 3600 * 24)); // Working fine till 3rd Jan 1970. Less than that isn't working : TODO
 
             const years = parseInt(days / 365);
             days -= years * 365.25;
@@ -108,7 +108,6 @@ class AgeCalculator extends Component {
             age.style.display = "inherit";
 
             let ageText = years + " ";
-
             if (years === 1) ageText += "year";
             else ageText += "years";
 
@@ -137,7 +136,7 @@ class AgeCalculator extends Component {
             <div className="dmy-container">
                <div className="date-container">
                   <label>Date:</label>
-                  <select className="date-dd" onClick={this.checkMonthAndYear}>
+                  <select className="date-dd" onClick={this.changeDatesBasedOnMonthAndYear}>
                      <option value="select">Select Date</option>
                      <option value="1">1</option>
                      <option value="2">2</option>
