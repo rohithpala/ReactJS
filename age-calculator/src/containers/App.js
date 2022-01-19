@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../stylesheets/App.css";
-import AgeCalculator from './age-calculator';
+import AgeCalculator from "./age-calculator";
 
 class App extends Component {
    render() {
