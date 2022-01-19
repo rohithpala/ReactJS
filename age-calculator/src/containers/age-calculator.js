@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import "../stylesheets/age-calculator.css";
 
-function changeDate(calledBy) {
-   if ((calledBy === "month") || (calledBy === "year" && document.getElementById("month-dd").value === "2"))
-      document.getElementById('date-dd').selectedIndex = 0;
-}
-
 class AgeCalculator extends Component {
    state = {
-      dateArray: [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+      dateArray: [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+   }
+
+   changeDate(calledBy) {
+      if ((calledBy === "month") || (calledBy === "year" && document.getElementById("month-dd").value === "2"))
+         document.getElementById("date-dd").selectedIndex = 0;
    }
 
    checkMonthAndYear = () => {
@@ -100,10 +100,25 @@ class AgeCalculator extends Component {
 
             days += this.noOfLeapYears(yearOfBirth);
 
-            console.log(1);
+            days = parseInt(days);
+
             const age = document.getElementById('age');
             age.style.display = "inherit";
-            age.innerText = years + " years " + months + " months " + parseInt(days) + " days";
+
+            let ageText = years + " ";
+
+            if (years === 1) ageText += "year";
+            else ageText += "years";
+
+            ageText += " " + months + " ";
+            if (months === 1) ageText += "month";
+            else ageText += "months";
+
+            ageText += " " + days + " ";
+            if (days === 1) ageText += "day";
+            else ageText += "days";
+
+            age.innerText = ageText;
          }
       }
    }
@@ -158,7 +173,7 @@ class AgeCalculator extends Component {
 
                <div id="month-container">
                   <label>Month:</label>
-                  <select id="month-dd" onChange="changeDate('month')">
+                  <select id="month-dd" onChange={() => this.changeDate("month")}>
                      <option value="select">Select Month</option>
                      <option value="1">January</option>
                      <option value="2">February</option>
@@ -177,7 +192,14 @@ class AgeCalculator extends Component {
 
                <div id="year-container">
                   <label>Year:</label>
-                  <input id="year-ip" type="number" min="1" max={new Date().getFullYear()} placeholder="Year" onInput="changeDate('year')" />
+                  <input
+                     id="year-ip"
+                     type="number"
+                     min="1"
+                     max={new Date().getFullYear()}
+                     placeholder="Year"
+                     onChange={() => this.changeDate("year")}
+                  />
                </div>
             </div>
 

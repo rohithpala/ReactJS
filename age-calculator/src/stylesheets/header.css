@@ -1,21 +1,28 @@
 #menu {
-   display: flex;
-   justify-content: space-around;
-   list-style: none;
-   background-color: #1e1e1e;
-   padding: 15px;
- }
- 
- #menu li a {
-   color: rgb(255, 196, 0);
-   font-weight: bold;
-   text-decoration: none;
- }
- 
- #menu li a:hover {
-   background-color: rgb(255, 196, 0);
-   color: #1e1e1e;
-   box-shadow: 5px 10px 38px #777676;
-   padding: 5px;
- }
- 
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: #1e1e1e;
+  padding: 15px;
+}
+
+.menu-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffc400;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffc400;
+  transition: width 0.3s;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
