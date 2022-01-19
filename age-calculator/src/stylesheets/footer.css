@@ -61,19 +61,9 @@ footer hr {
   align-items: center;
 }
 
-#instagram,
-#youtube,
-#github,
-#whatsapp,
-#phone,
-#email,
-#linkedin {
+.icon {
   margin-top: 2px;
   font-size: 1.5em;
-}
-
-#phone {
-  color: #4eeaff;
 }
 
 #instagram {
@@ -82,10 +72,6 @@ footer hr {
 
 #youtube {
   color: #f00;
-}
-
-#whatsapp {
-  color: #25d366;
 }
 
 #github {

@@ -10,7 +10,7 @@ class Footer extends Component {
                <a href="../age-calculator/age-calculator.html">age calculator</a>
             </div>
 
-            <div class="vertical-line"></div>
+            <div className="vertical-line"></div>
 
             <div id="links">
                <p>Links</p>
@@ -22,26 +22,26 @@ class Footer extends Component {
                </ul>
             </div>
 
-            <div class="vertical-line"></div>
+            <div className="vertical-line"></div>
 
             <div id="contact-us">
                <p>Contact Us</p>
                <hr />
                <div>
                   <a href="mailto:programmerrohith@gmail.com">
-                     <i class="fas fa-envelope" id="email"></i>
+                     <i className="fas fa-envelope icon" id="email"></i>
                   </a>
                   <a href="https://github.com/rohithpala" target="_blank" rel="noreferrer">
-                     <i class="fab fa-github" id="github"></i>
+                     <i className="fab fa-github icon" id="github"></i>
                   </a>
                   <a href="https://instagram.com/rohith._.pala._" target="_blank" rel="noreferrer">
-                     <i class="fab fa-instagram" id="instagram"></i>
+                     <i className="fab fa-instagram icon" id="instagram"></i>
                   </a>
                   <a href="https://www.youtube.com/channel/UC_HL-GS9SzPh3O7i71qX2Ww" target="_blank" rel="noreferrer">
-                     <i class="fab fa-youtube" id="youtube"></i>
+                     <i className="fab fa-youtube icon" id="youtube"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/rohithpala" target="_blank" rel="noreferrer">
-                     <i class="fab fa-linkedin" id="linkedin"></i>
+                     <i className="fab fa-linkedin icon" id="linkedin"></i>
                   </a>
                </div>
             </div>
