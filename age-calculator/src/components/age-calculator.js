@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import "../stylesheets/age-calculator.css";
 
 class AgeCalculator extends Component {
@@ -102,7 +104,7 @@ class AgeCalculator extends Component {
 
             days = parseInt(days);
 
-            const age = document.getElementById('age');
+            const age = document.getElementById("age");
             age.style.display = "inherit";
 
             let ageText = years + " ";
@@ -125,17 +127,17 @@ class AgeCalculator extends Component {
 
    render() {
       return (
-         <div id="main">
-            <div id="heading">
+         <div className="age-calculator">
+            <div className="heading">
                <h1>Age Calculator:</h1>
                <pre>  </pre>
-               <a href="../how-it-works/how-it-works.html"><i className="fas fa-info-circle" id="info"></i></a>
+               <Link to="/working"><i className="fas fa-info-circle info"></i></Link>
             </div>
 
-            <div id="dmy-container">
-               <div id="date-container">
+            <div className="dmy-container">
+               <div className="date-container">
                   <label>Date:</label>
-                  <select id="date-dd" onClick={this.checkMonthAndYear}>
+                  <select className="date-dd" onClick={this.checkMonthAndYear}>
                      <option value="select">Select Date</option>
                      <option value="1">1</option>
                      <option value="2">2</option>
@@ -171,9 +173,9 @@ class AgeCalculator extends Component {
                   </select>
                </div>
 
-               <div id="month-container">
+               <div className="month-container">
                   <label>Month:</label>
-                  <select id="month-dd" onChange={() => this.changeDate("month")}>
+                  <select className="month-dd" onChange={() => this.changeDate("month")}>
                      <option value="select">Select Month</option>
                      <option value="1">January</option>
                      <option value="2">February</option>
@@ -190,10 +192,10 @@ class AgeCalculator extends Component {
                   </select>
                </div>
 
-               <div id="year-container">
+               <div className="year-container">
                   <label>Year:</label>
                   <input
-                     id="year-ip"
+                     className="year-ip"
                      type="number"
                      min="1"
                      max={new Date().getFullYear()}
@@ -203,12 +205,12 @@ class AgeCalculator extends Component {
                </div>
             </div>
 
-            <div id="btn-container">
-               <button id="age-button" type="submit" onClick={this.calculateAge}>Calculate Age</button>
+            <div className="btn-container">
+               <button className="age-button" type="submit" onClick={this.calculateAge}>Calculate Age</button>
             </div>
 
-            <div id="age-container">
-               <span id="age"></span>
+            <div className="age-container">
+               <span className="age"></span>
             </div>
          </div>
       );

@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-#main {
+.age-calculator {
   position: relative;
   background-color: #3e3e3e;
   display: flex;
@@ -17,55 +17,51 @@
   border: 2px solid #fff;
 }
 
-#heading {
+.heading {
   display: flex;
   color: #fcd2e8;
   min-width: 50px;
   font-size: larger;
 }
 
-#heading a {
+.heading a {
   height: fit-content;
 }
 
-#info {
+.info {
   color: #fcd2e8;
 }
 
-#info:hover {
-  color: #fff;
-}
-
-#dmy-container {
+.dmy-container {
   display: flex;
   flex-direction: column;
 }
 
-#date-container,
-#month-container,
-#year-container {
+.date-container,
+.month-container,
+.year-container {
   color: #fff;
   padding: 20px 50px;
 }
 
-#date-dd,
-#month-dd,
-#year-ip {
+.date-dd,
+.month-dd,
+.year-ip {
   width: 120px;
   text-align: center;
   outline: none;
 }
 
-#month-dd {
+.month-dd {
   margin-left: 33px;
 }
 
-#date-dd,
-#year-ip {
+.date-dd,
+.year-ip {
   margin-left: 45px;
 }
 
-#age-button {
+.age-button {
   color: #fff;
   background-color: transparent;
   margin-top: 15px;
@@ -74,18 +70,18 @@
   border-radius: 5px;
 }
 
-#age-button:hover {
+.age-button:hover {
   background-color: #eee;
   color: #1e1e1e;
   transition: 0.2s;
   cursor: pointer;
 }
 
-#age-container {
+.age-container {
   margin-top: 10px;
 }
 
-#age {
+.age {
   display: none;
   color: #fff;
   font-weight: bold;

@@ -1,4 +1,4 @@
-#menu {
+.menu {
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -6,15 +6,16 @@
   padding: 15px;
 }
 
-.menu-link {
+.menu-item {
   display: inline-block;
   text-decoration: none;
   color: #ffc400;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.menu-link::after {
+.menu-item::after {
   content: "";
   display: block;
   width: 0;
@@ -23,6 +24,6 @@
   transition: width 0.3s;
 }
 
-.menu-link:hover::after {
+.menu-item:hover::after {
   width: 100%;
 }

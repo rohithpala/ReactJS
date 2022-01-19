@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import '../stylesheets/header.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
+import "../stylesheets/header.css";
 
 class Header extends Component {
    render() {
       return (
          <header>
-            <ul id="menu">
-               <li className="menu-link">Home</li>
-               <li className="menu-link">About Us</li>
-               <li className="menu-link">How it all Works?</li>
-               <li className="menu-link">Leave Us a Feedback</li>
+            <ul className="menu">
+               <Link to="/" className="menu-item">Home</Link>
+               <Link to="/about" className="menu-item">About Me</Link>
+               <Link to="/working" className="menu-item">How it all Works?</Link>
+               <Link to="/feedback" className="menu-item">Leave Us a Feedback</Link>
             </ul>
          </header>
       );

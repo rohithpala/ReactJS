@@ -1,5 +1,5 @@
 footer {
-  position: absolute; /* relative to 'body' */
+  position: absolute; /* relative to "body" */
   bottom: 0;
   width: 100%;
   background-color: #1e1e1e;
@@ -11,35 +11,13 @@ footer {
   border-top: 2px solid #fff;
 }
 
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-}
-
-.vertical-line {
-  background-color: #fff;
-  border: 1px solid #fff;
-  height: 90px;
-}
-
 footer ul {
   list-style: none;
-}
-
-footer li {
-  display: inline;
-  padding: 0 5px;
 }
 
 footer a {
   text-decoration: none;
   color: rgb(255, 196, 0);
-}
-
-#links a:hover {
-  text-decoration: underline;
 }
 
 footer p {
@@ -53,12 +31,35 @@ footer hr {
   background-color: #fff;
 }
 
-#links,
-#contact-us {
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.vertical-line {
+  background-color: #fff;
+  border: 1px solid #fff;
+  height: inherit;
+  min-height: 90px;
+}
+
+.links-container,
+.contact-us {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.link {
+  display: inline;
+  padding: 0 5px;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 .icon {
@@ -66,22 +67,22 @@ footer hr {
   font-size: 1.5em;
 }
 
-#instagram {
+.instagram {
   color: #ff002b;
 }
 
-#youtube {
+.youtube {
   color: #f00;
 }
 
-#github {
+.github {
   color: #fff;
 }
 
-#linkedin {
+.linkedin {
   color: #0077b5;
 }
 
-#contact-us a {
+.contact-us a {
   margin: 0 5px;
 }
