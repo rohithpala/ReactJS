@@ -9,13 +9,13 @@ class AgeCalculator extends Component {
    }
 
    changeDate(calledBy) {
-      if ((calledBy === "month") || (calledBy === "year" && document.getElementById("month-dd").value === "2"))
-         document.getElementById("date-dd").selectedIndex = 0;
+      if ((calledBy === "month") || (calledBy === "year" && document.querySelector(".month-dd").value === "2"))
+         document.querySelector(".date-dd").selectedIndex = 0;
    }
 
    checkMonthAndYear = () => {
-      let inputMonth = document.getElementById("month-dd");
-      let inputYear = document.getElementById("year-ip");
+      let inputMonth = document.querySelector(".month-dd");
+      let inputYear = document.querySelector(".year-ip");
 
       const monthCheck = (inputMonth.value === "select"), yearCheck = (inputYear.value === "");
       if (monthCheck && yearCheck) {
@@ -25,13 +25,13 @@ class AgeCalculator extends Component {
       } else if (yearCheck) {
          alert("Please input Year before inputting date");
       } else {
-         const inputDate = document.getElementById("date-dd");
+         const inputDate = document.querySelector(".date-dd");
          inputMonth = parseInt(inputMonth.value);
          inputYear = parseInt(inputYear.value);
 
-         const d29 = document.querySelector("#date-dd option[value='29']");
-         const d30 = document.querySelector("#date-dd option[value='30']");
-         const d31 = document.querySelector("#date-dd option[value='31']");
+         const d29 = document.querySelector(".date-dd option[value='29']");
+         const d30 = document.querySelector(".date-dd option[value='30']");
+         const d31 = document.querySelector(".date-dd option[value='31']");
 
          if (inputMonth === 2) {
             if (inputYear % 4 === 0) {
@@ -68,9 +68,9 @@ class AgeCalculator extends Component {
    }
 
    checkFields = () => {
-      if (document.getElementById("date-dd").value === "select" ||
-         document.getElementById("month-dd").value === "select" ||
-         document.getElementById("year-ip").value === "") {
+      if (document.querySelector(".date-dd").value === "select" ||
+         document.querySelector(".month-dd").value === "select" ||
+         document.querySelector(".year-ip").value === "") {
          alert("Please input all the fields");
          return false;
       }
@@ -79,9 +79,9 @@ class AgeCalculator extends Component {
 
    calculateAge = () => {
       if (this.checkFields()) {
-         const inputDate = document.getElementById("date-dd");
-         const inputMonth = document.getElementById("month-dd");
-         const inputYear = document.getElementById("year-ip");
+         const inputDate = document.querySelector(".date-dd");
+         const inputMonth = document.querySelector(".month-dd");
+         const inputYear = document.querySelector(".year-ip");
          const dateOfBirth = parseInt(inputDate.value);
          const yearOfBirth = parseInt(inputYear.value);
          const today = new Date().getTime();
@@ -104,7 +104,7 @@ class AgeCalculator extends Component {
 
             days = parseInt(days);
 
-            const age = document.getElementById("age");
+            const age = document.querySelector(".age");
             age.style.display = "inherit";
 
             let ageText = years + " ";
