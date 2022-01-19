@@ -30,7 +30,7 @@ class Feedback extends Component {
             alert("Your Feedback is Empty. Please type your Feedback");
          } else {
             if (window.confirm("We'll Send your feedback")) {
-               window.open("https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=programmerrohith@gmail.com" + "&subject=" + encodeURIComponent("Feedback for the Age Calculator") + "&body=" + encodeURIComponent(feedback));
+               window.open("https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=programmerrohith@gmail.com&subject=" + encodeURIComponent("Feedback for the Age Calculator") + "&body=" + encodeURIComponent(feedback));
                document.querySelector(".characters-left-para").style.visibility = "hidden";
             }
          }
