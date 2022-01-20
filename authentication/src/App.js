@@ -5,6 +5,8 @@ import LeftPanel from "./components/left-panel";
 import Login from "./components/login";
 import SignUp from "./components/signup";
 
+import "./stylesheets/App.css";
+
 class App extends Component {
    render() {
       return (
