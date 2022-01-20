@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "../stylesheets/left-panel.css";
 
 class LeftPanel extends Component {
