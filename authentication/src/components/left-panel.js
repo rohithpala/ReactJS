@@ -4,7 +4,7 @@ import "../stylesheets/left-panel.css";
 class LeftPanel extends Component {
    render() {
       return (
-         <div id="left-panel"></div>
+         <div id="left-panel">Left Panel</div>
       );
    }
 }

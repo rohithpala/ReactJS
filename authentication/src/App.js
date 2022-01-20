@@ -7,14 +7,16 @@ import SignUp from "./components/signup";
 
 class App extends Component {
    render() {
-      <BrowserRouter>
-         <LeftPanel />
-         <Routes>
-            <Route exact path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-         </Routes>
-      </BrowserRouter>
+      return (
+         <BrowserRouter>
+            <LeftPanel />
+            <Routes>
+               <Route exact path="/" element={<Login />} />
+               <Route path="/login" element={<Login />} />
+               <Route path="/signup" element={<SignUp />} />
+            </Routes>
+         </BrowserRouter>
+      );
    }
 }
 
