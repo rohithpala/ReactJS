@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import "../stylesheets/footer.css";
-import "https://kit.fontawesome.com/23538a4f23.js";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Footer extends Component {
    render() {
@@ -31,10 +31,12 @@ class Footer extends Component {
                <hr />
                <div>
                   <a href="mailto:programmerrohith@gmail.com">
-                     <i className="fas fa-envelope icon email"></i>
+                     <FontAwesomeIcon icon="fa-solid fa-envelope" className="icon email" />
+                     {/* <i className="fas fa-envelope icon email"></i> */}
                   </a>
                   <a href="https://github.com/rohithpala" target="_blank" rel="noreferrer">
-                     <i className="fab fa-github icon github"></i>
+                     <FontAwesomeIcon icon="fa-brands fa-github" className="icon github" />
+                     {/* <i className="fab fa-github icon github"></i> */}
                   </a>
                   <a href="https://instagram.com/rohith._.pala._" target="_blank" rel="noreferrer">
                      <i className="fab fa-instagram icon instagram"></i>
