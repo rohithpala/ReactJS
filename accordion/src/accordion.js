@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import "./accordion.css";
 
 class Accordion extends Component {
-   toggleAccordion = (e) => { // TODO
+   toggleAccordion = (e) => {
       console.log(e);
-      const content = e.nextElementSibling;// document.querySelector(".content");
+      const content = e.nextElementSibling;
       if (content.style.maxHeight) content.style.maxHeight = null;
       else content.style.maxHeight = content.scrollHeight + "px";
    }

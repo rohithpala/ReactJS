@@ -4,9 +4,12 @@ import Accordion from "./accordion";
 function App() {
    return (
       <div className="accordions">
-         <Accordion accordionName={1} />
-         <Accordion accordionName={2} />
-         <Accordion accordionName={3} />
+         {
+            let i = 0;
+            for (; i < 5 ; i++) {
+               <Accordion accordionName={i} />
+            }
+         }
       </div>
    );
 }
