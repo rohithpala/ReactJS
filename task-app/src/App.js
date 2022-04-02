@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +14,7 @@ class App extends Component {
   }
 
   handleAddTask = () => {
-    React.render(<AddTaskModal />, document.getElementById("root"));
+    ReactDOM.render(<AddTaskModal />, document.getElementById("root"));
   }
 
   render() {
