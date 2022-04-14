@@ -24,61 +24,38 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
-.add-btn {
-  background-color: transparent;
-  border: 2px solid #000100;
-  border-radius: 2rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: 0.2s transform;
-}
-
-.code {
-  --border-width: 3px; /* variable */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  padding: 5px 15px;
-  border-radius: 2rem;
-}
-
-.code:after {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  width: calc(100% + var(--border-width) * 2);
-  height: calc(100% + var(--border-width) * 2);
-  border-radius: 2rem;
-  background: linear-gradient(
-    60deg,
-    hsl(224, 85%, 66%),
-    hsl(269, 85%, 66%),
-    hsl(314, 85%, 66%),
-    hsl(359, 85%, 66%),
-    hsl(44, 85%, 66%),
-    hsl(89, 85%, 66%),
-    hsl(134, 85%, 66%),
-    hsl(179, 85%, 66%)
-  );
-  background-size: 300% 300%;
-  background-position: 0 50%;
-  transition: 0.2s transform;
-  animation: borderAnimation 4s alternate infinite;
-}
-
-@keyframes borderAnimation {
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.add-btn:active,
-.code:active {
-  transform: scale(0.95);
-}
-
-a {
+/* Animating Buttons */
+a.animated-btn {
+  color: #000;
   text-decoration: none;
 }
+
+.animated-btn {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #000100;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+
+.animated-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  transition: width 0.4s;
+  z-index: -1;
+}
+
+.animated-btn:hover {
+  color: #fff;
+}
+
+.animated-btn:hover.animated-btn::after {
+  width: 100%;
+}
+

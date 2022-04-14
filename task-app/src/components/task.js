@@ -7,11 +7,11 @@ import "../stylesheets/task.css";
 class Task extends Component {
 
    handleEdit = () => {
-      
+
    }
 
    handleDelete = () => {
-      
+
    }
 
    render() {
