@@ -8,5 +8,105 @@
 }
 
 body {
+  background-color: #ddd;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+.c-player {
+  display: block;
+  background-color: #313131;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.c-player>h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.c-player>p {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.c-player-details .details-image {
+  position: relative;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+.c-player-details .details-image img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 270px;
+  padding: 5px;
+  border: 4px dotted #FFCE00;
+  border-radius: 50%;
+  box-shadow: -2px -2px 12px rgba(255, 255, 255, 0.4),
+    6px 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.c-player-details .details-title {
+  color: #eee;
+  font-size: 28px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.c-player-details .details-artist {
+  color: #eee;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.c-player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.c-player-controls .play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #DDD;
+  background-color: #FFCE00;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.8),
+    -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.c-player-controls .previous-button,
+.c-player-controls .next-button {
+  color: #ccc;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
 }
