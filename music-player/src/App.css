@@ -76,8 +76,8 @@ body {
 
 .c-player-controls {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
   margin: 20px 0;
 }
 
@@ -89,6 +89,7 @@ body {
   background-color: #FFCE00;
   width: 60px;
   height: 60px;
+  margin: 0 20px;
   border-radius: 50%;
   font-size: 24px;
   box-shadow:

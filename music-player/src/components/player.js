@@ -21,11 +21,11 @@ function Player(props) {
    const skipSong = (next = true) => {
       if (next) {
          props.setCurrentSongIndex(() => {
-            return (props.currentSongIndex + 1) % numOfSongs;
+            return (currentSongIndex + 1) % numOfSongs;
          });
       } else {
          props.setCurrentSongIndex(() => {
-            const csi = props.currentSongIndex - 1;
+            const csi = currentSongIndex - 1;
             if (csi < 0)
                return numOfSongs - 1;
             return csi;
@@ -36,16 +36,16 @@ function Player(props) {
 
    return (
       <div className="c-player">
-         <audio src={songs[props.currentSongIndex].src} ref={audioElement}></audio>
+         <audio src={songs[currentSongIndex].src} ref={audioElement}></audio>
          <h4>Playing Now</h4>
-         <PlayerDetails song={songs[props.currentSongIndex]} />
+         <PlayerDetails song={songs[currentSongIndex]} />
          <PlayerControls
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
             skipSong={skipSong}
          />
          <p>
-            <strong>Next Up: </strong>{songs[props.nextSongIndex].title} by {songs[props.nextSongIndex].artist}
+            <strong>Next Up: </strong>{songs[nextSongIndex].title} by {songs[nextSongIndex].artist}
          </p>
       </div>
    )
