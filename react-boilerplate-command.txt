@@ -1,1 +1,0 @@
-git clone --single-branch -b "react-boilerplate" https://github.com/rohithpala/ReactJS.git folder-name
